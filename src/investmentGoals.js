@@ -2,7 +2,7 @@ function convertToMonthlyReturnRate(yearlyReturnRate) {
   return yearlyReturnRate ** (1 / 12);
 }
 
-function generateReturnArray(
+export function generateReturnArray(
   startingAmount = 0,
   timeHorizon = 0,
   timePeriod = "monthly",
@@ -25,8 +25,8 @@ function generateReturnArray(
 
   const referenceInvestmentObject = {
     investedAmound: startingAmount,
-    interestReturns: 0,
-    totalInterestReturn: 0,
+    interestReturns: 0, // rendimento do ultimo mês
+    totalInterestReturn: 0, // rendimento total
     month: 0,
     totalAmount: startingAmount,
   };
