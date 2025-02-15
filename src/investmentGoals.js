@@ -40,15 +40,15 @@ export function generateReturnArray(
     const totalAmount =
       returnsArray[timeReference - 1].totalAmount * finalReturnRate +
       monthlyContribution;
-    const interestReturn =
-      returnsArray[timeReference - 1].totalAmount * finalReturnRate;
+    const interestReturns =
+      returnsArray[timeReference - 1].totalAmount * (finalReturnRate - 1);
     const investedAmound = startingAmount + monthlyContribution * timeReference;
-    const totalinterestReturns = totalAmount - investedAmound;
+    const totalInterestReturns = totalAmount - investedAmound;
 
     returnsArray.push({
       investedAmound,
-      interestReturn,
-      totalinterestReturns,
+      interestReturns,
+      totalInterestReturns,
       month: timeReference,
       totalAmount,
     });
