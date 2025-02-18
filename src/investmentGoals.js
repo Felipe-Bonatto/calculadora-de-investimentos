@@ -26,7 +26,7 @@ export function generateReturnArray(
   const referenceInvestmentObject = {
     investedAmound: startingAmount,
     interestReturns: 0, // rendimento do ultimo mês
-    totalInterestReturn: 0, // rendimento total
+    totalInterestReturns: 0, // rendimento total
     month: 0,
     totalAmount: startingAmount,
   };
